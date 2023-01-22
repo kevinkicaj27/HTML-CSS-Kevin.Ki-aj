@@ -1,0 +1,535 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');
+* {
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 7rem;
+  line-height: 0.8;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 3.4375rem;
+  line-height: 1.1;
+}
+
+a {
+  color: #111;
+}
+
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.btn {
+  border-style: solid;
+  border-width: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin: 32px auto 0 0;
+  padding: 16px 46px 17px 45px;
+  text-decoration: none;
+  border-radius: 29px;
+}
+
+.card {
+  color: #111;
+  background-color: #fff;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 20px;
+}
+.card .thumbnail {
+  width: 100%;
+  height: 190px;
+  border-radius: 25px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  h2 {
+    font-size: 2.125rem;
+    line-height: 1.1;
+  }
+}
+header {
+  height: 80px;
+  background-color: #fff;
+}
+header .container {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .container .logo {
+  height: 80px;
+}
+header nav {
+  width: 50%;
+  display: block;
+}
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header nav a {
+  color: #111;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+header nav a:hover {
+  text-decoration: underline;
+}
+header .menu-icon {
+  display: none;
+}
+
+main {
+  width: 100%;
+  height: calc(100vh - 80px);
+  background-image: url("../images/LD.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+main .container {
+  height: calc(100vh - 80px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main .intro {
+  width: 60%;
+  height: 50vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+main .intro h1{
+  position: relative;
+  left: 50px;
+  color: white;
+}
+main .intro h3 {
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 1.375rem;
+  margin: 0 1px 30px 0;
+  position: relative;
+  left: 50px;
+  color: white;
+}
+
+main .intro p {
+  position: relative;
+  left: 50px;
+  color: white;
+}
+main .intro span {
+  display: block;
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+main .intro .title {
+  grid-column: 1/4;
+  margin-bottom: 80px;
+}
+main .intro .title span:nth-child(1) {
+  text-transform: uppercase;
+  letter-spacing: 12px;
+  font-size: 1.875rem;
+  font-weight: 400;
+  margin: 0 auto 0 0;
+}
+main .intro .callus a {
+  display: inline-block;
+  margin-bottom: 20px;
+  text-decoration: none;
+  border-bottom: 1px solid #f2952d;
+  transition: all 0.3s ease-in-out;
+}
+main .intro .callus a:hover {
+  border-color: #111;
+}
+
+section.awards {
+  padding: 70px 0px 120px 0px;
+  background-color: ivory;
+}
+section.awards h2 {
+  text-align: center;
+}
+section.awards .awards-grid {
+  margin-top: 70px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 40px;
+}
+section.awards .awards-grid .award {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+section.awards .awards-grid img {
+  height: 65px !important;
+}
+section.awards .awards-grid h4 {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.stats {
+  padding: 70px 0;
+  background-color: #f2f2f2;
+}
+.stats h2 {
+  margin-bottom: 60px;
+  text-align: center;
+}
+.stats .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 25px;
+  text-align: center;
+}
+.stats .stats-grid h3 {
+  text-transform: uppercase;
+  font-size: 1.125rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  margin: 20px auto 0;
+}
+.stats .stats-grid p {
+  margin: 20px 0;
+}
+
+.biography {
+  padding: 80px 0px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 45%, rgb(242, 242, 242) 45%);
+}
+.biography .container {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.biography-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr;
+  gap: 40px;
+}
+.biography-grid .fc-image {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+.biography-grid img {
+  width: 100%;
+  display: block;
+}
+.biography-grid .sc-image {
+  margin-top: 40px;
+}
+.biography .content {
+  margin-top: 50px;
+}
+.biography .content h3 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+}
+.biography .content p {
+  font-size: 1.125rem;
+  line-height: 2;
+  margin: 30px 0px 0px 0px;
+  top: -50px;
+}
+.biography .content p a {
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+  transition: all 0.3 ease-in-out;
+}
+.biography .content p a:hover {
+  border-bottom-color: #f2952d;
+}
+.biography .content .btn {
+  border-color: #000;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  left: 350px;
+}
+.biography .content .btn:hover {
+  color: white;
+  background-color: #000;
+}
+
+.career {
+  padding: 120px 0px;
+  background-image: url("../images/LDRM2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.career h2 {
+  color: #fff;
+  text-align: center;
+}
+.career-grid {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.career-grid .card {
+  padding: 35px 20px;
+  background-color: rgb(189, 197, 197);
+  opacity: 0.8;
+}
+.career-grid h3 {
+  font-size: 1.5rem;
+  line-height: 1.2;
+  margin-bottom: 25px;
+}
+.career-grid ul {
+  list-style-type: none;
+}
+.career-grid li {
+  font-size: 1.25rem;
+  line-height: 2;
+}
+.career-grid li::before {
+  content: "—";
+  margin-right: 10px;
+}
+
+.national {
+  padding: 80px 0px;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(0deg, rgb(255, 255, 255) 45%, rgb(242, 242, 242) 45%);
+}
+.national .container {
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.national-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr 2fr;
+  gap: 40px;
+}
+.national-grid .fc-image {
+  grid-column: 2/3;
+  grid-row: 1/3;
+}
+.national-grid img {
+  width: 100%;
+  display: block;
+}
+.national-grid .sc-image {
+  margin-top: 40px;
+}
+.national .content {
+  margin-top: 50px;
+}
+.national .content h3 {
+  font-size: 1.875rem;
+  line-height: 1.2;
+}
+.national .content p {
+  font-size: 1.125rem;
+  line-height: 2;
+  margin: 30px 0px 0px 0px;
+  top: -50px;
+}
+.national .content p a {
+  text-decoration: none;
+  border-bottom: 2px solid #000;
+  transition: all 0.3 ease-in-out;
+}
+.national .content p a:hover {
+  border-bottom-color: #f2952d;
+}
+.national .content .btn {
+  border-color: #000;
+  color: #000;
+  display: inline-block;
+  position: relative;
+  left: 350px;
+}
+.national .content .btn:hover {
+  color: white;
+  background-color: #000;
+}
+
+
+.end {
+  padding: 240px 0px;
+  background-image: url("../images/end.png");
+  background-size: cover;
+  background-position: center center;
+}
+.quote {
+  width: 45%;
+  color: white;
+  background-color: rgba(37, 74, 175, 0.808);
+  /* opacity: 0.5; */
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+.quote p {
+  letter-spacing: 1px;
+  font-size: 1.125rem;
+  margin-top: 25px;
+  opacity: 1;
+}
+
+footer {
+  background-color: #0047AB;
+  padding: 60px 0px;
+  text-align: center;
+}
+footer p {
+  line-height: 40px;
+  font-size: 0.875rem;
+  color: white;
+}
+
+
+@media screen and (max-width: 768px) {
+  header nav {
+    display: none;
+  }
+  header .menu-icon {
+    display: block;
+    width: 31px;
+    height: 31px;
+    background-image: url("../images/menu-icon.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  header .menu-icon:hover {
+    background-image: url("../images/menu-icon-hover.png");
+  }
+  main {
+    height: auto;
+    background-position: 96.11% 50%;
+  }
+  main .container {
+    height: auto;
+  }
+  main h3 {
+    margin: 20px 0px 10px 0px !important;
+  }
+  main .intro {
+    width: 100%;
+    height: 100%;
+    padding-top: 80px;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+  }
+  main .intro .title {
+    grid-column: 1/1;
+  }
+  main .intro .title h1 {
+    font-size: 3.8rem;
+  }
+  main .intro .title span:nth-child(1) {
+    font-size: 1.05rem;
+    line-height: 1.2;
+  }
+  main .intro .title span:nth-child(1) span {
+    display: block;
+  }
+  section.awards .awards-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+  }
+  section.awards .awards-grid img {
+    height: 65px !important;
+  }
+  .stats .stats-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+  }
+  .stats .card {
+    margin: 0 30px;
+  }
+  .biography .container {
+    width: 85% !important;
+  }
+  .biography-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .biography-grid .sc-image {
+    margin-top: 0px;
+  }
+
+  .biography .content .btn {
+    border-color: #000;
+    color: #000;
+    display: inline-block;
+    position: relative;
+    left: 0px;
+  }
+
+  .national .container {
+    width: 85% !important;
+  }
+  .national-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .national-grid .sc-image {
+    margin-top: 0px;
+  }
+  .national .content .btn {
+    border-color: #000;
+    color: #000;
+    display: inline-block;
+    position: relative;
+    left: 0px;
+  }
+  .career-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .quote {
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .end h3 {
+    font-size: 1.9rem;
+  }
+  .end p {
+    font-size: 1rem;
+  }
+}
