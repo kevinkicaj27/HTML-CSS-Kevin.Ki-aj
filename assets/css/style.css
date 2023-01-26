@@ -51,7 +51,7 @@ a {
 }
 .card .thumbnail {
   width: 100%;
-  height: 190px;
+  height: 300px;
   border-radius: 25px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -81,6 +81,11 @@ header .container {
 header .container .logo {
   height: 80px;
 }
+
+header .container .logo:hover {
+  height: 160px;
+  margin-top: 65px;
+}
 header nav {
   width: 50%;
   display: block;
@@ -97,7 +102,8 @@ header nav a {
   transition: all 0.3s ease-in-out;
 }
 header nav a:hover {
-  text-decoration: underline;
+  color: #0047AB;
+  font-size: larger;
 }
 header .menu-icon {
   display: none;
@@ -110,6 +116,11 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+main:hover {
+  background-image: url("../images/lddark.jpg");
+}
+
 main .container {
   height: calc(100vh - 80px);
   display: flex;
@@ -132,7 +143,6 @@ main .intro h1{
 main .intro h3 {
   font-weight: 700;
   letter-spacing: 1px;
-  text-transform: uppercase;
   font-size: 1.375rem;
   margin: 0 1px 30px 0;
   position: relative;
@@ -145,35 +155,34 @@ main .intro p {
   left: 50px;
   color: white;
 }
-main .intro span {
-  display: block;
-  font-size: 1.125rem;
-  line-height: 1.6;
-}
+
 main .intro .title {
   grid-column: 1/4;
   margin-bottom: 80px;
 }
-main .intro .title span:nth-child(1) {
-  text-transform: uppercase;
-  letter-spacing: 12px;
-  font-size: 1.875rem;
-  font-weight: 400;
-  margin: 0 auto 0 0;
-}
-main .intro .callus a {
-  display: inline-block;
-  margin-bottom: 20px;
-  text-decoration: none;
-  border-bottom: 1px solid #f2952d;
-  transition: all 0.3s ease-in-out;
-}
-main .intro .callus a:hover {
-  border-color: #111;
+
+section.highlights h2 {
+  text-align: center;
+  color: white;
 }
 
+section.highlights {
+  height: 440px;
+  background-color: #002B5E;
+}
+
+section.highlights .container {
+  position: relative;
+  top: 40px;
+}
+
+section.highlights .container iframe{
+  position: relative;
+  margin-left: 290px;
+  border-style: groove;
+}
 section.awards {
-  padding: 70px 0px 120px 0px;
+  padding: 40px 0px 120px 0px;
   background-color: ivory;
 }
 section.awards h2 {
@@ -183,7 +192,6 @@ section.awards .awards-grid {
   margin-top: 70px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 40px;
 }
 section.awards .awards-grid .award {
@@ -199,23 +207,25 @@ section.awards .awards-grid h4 {
   font-size: 1.25rem;
 }
 
+section.awards .awards-grid p{
+  text-align: justify;
+}
+
 .stats {
   padding: 70px 0;
-  background-color: #f2f2f2;
+  background-color: white;
 }
 .stats h2 {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
   text-align: center;
 }
 .stats .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
   gap: 25px;
   text-align: center;
 }
 .stats .stats-grid h3 {
-  text-transform: uppercase;
   font-size: 1.125rem;
   letter-spacing: 2px;
   font-weight: 700;
@@ -225,10 +235,13 @@ section.awards .awards-grid h4 {
   margin: 20px 0;
 }
 
+.stats .stats-grid a:hover {
+  color: #0047AB;
+}
+
 .biography {
   padding: 80px 0px;
-  background: rgb(255, 255, 255);
-  background: linear-gradient(0deg, rgb(255, 255, 255) 45%, rgb(242, 242, 242) 45%);
+  background: white;
 }
 .biography .container {
   width: 900px;
@@ -251,10 +264,10 @@ section.awards .awards-grid h4 {
   display: block;
 }
 .biography-grid .sc-image {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .biography .content {
-  margin-top: 50px;
+  margin-top: 20px;
 }
 .biography .content h3 {
   font-size: 1.875rem;
@@ -265,6 +278,8 @@ section.awards .awards-grid h4 {
   line-height: 2;
   margin: 30px 0px 0px 0px;
   top: -50px;
+  text-align: justify;
+
 }
 .biography .content p a {
   text-decoration: none;
@@ -275,23 +290,22 @@ section.awards .awards-grid h4 {
   border-bottom-color: #f2952d;
 }
 .biography .content .btn {
-  border-color: #000;
-  color: #000;
+  border-color: #0047AB;
+  color: #0047AB;
   display: inline-block;
   position: relative;
   left: 350px;
 }
 .biography .content .btn:hover {
   color: white;
-  background-color: #000;
+  background-color: #0047AB;
 }
 
 .career {
   padding: 120px 0px;
   background-image: url("../images/LDRM2.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: center;
 }
 .career h2 {
   color: #fff;
@@ -300,18 +314,18 @@ section.awards .awards-grid h4 {
 .career-grid {
   margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
 }
 .career-grid .card {
   padding: 35px 20px;
   background-color: rgb(189, 197, 197);
-  opacity: 0.8;
+  opacity: 0.85;
 }
 .career-grid h3 {
   font-size: 1.5rem;
   line-height: 1.2;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 .career-grid ul {
   list-style-type: none;
@@ -351,39 +365,31 @@ section.awards .awards-grid h4 {
   display: block;
 }
 .national-grid .sc-image {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .national .content {
-  margin-top: 50px;
+  margin-top: 20px;
 }
-.national .content h3 {
-  font-size: 1.875rem;
-  line-height: 1.2;
-}
+
 .national .content p {
   font-size: 1.125rem;
   line-height: 2;
   margin: 30px 0px 0px 0px;
   top: -50px;
+  text-align: justify;
+
 }
-.national .content p a {
-  text-decoration: none;
-  border-bottom: 2px solid #000;
-  transition: all 0.3 ease-in-out;
-}
-.national .content p a:hover {
-  border-bottom-color: #f2952d;
-}
+
 .national .content .btn {
-  border-color: #000;
-  color: #000;
+  border-color: #0047AB;
+  color: #0047AB;
   display: inline-block;
   position: relative;
   left: 350px;
 }
 .national .content .btn:hover {
   color: white;
-  background-color: #000;
+  background-color: #0047AB;
 }
 
 
@@ -425,21 +431,24 @@ footer p {
   header nav {
     display: none;
   }
-  header .menu-icon {
-    display: block;
-    width: 31px;
-    height: 31px;
-    background-image: url("../images/menu-icon.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  header .menu-icon:hover {
-    background-image: url("../images/menu-icon-hover.png");
-  }
+
   main {
     height: auto;
+    width: 750px;
+    left: 100px;
     background-position: 96.11% 50%;
+    background-image: url("../images/phone2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
+
+ 
+main:hover {
+    background-image: url("../images/ld2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  
   main .container {
     height: auto;
   }
@@ -472,6 +481,20 @@ footer p {
   }
   section.awards .awards-grid img {
     height: 65px !important;
+  }
+
+  section.highlights {
+    background-color: white;
+  }
+
+  section.highlights h2{
+    color: #000;
+  }
+
+  section.highlights .container iframe{
+    position: relative;
+    margin-left: 0px;
+    border-style: groove;
   }
   .stats .stats-grid {
     grid-template-columns: repeat(1, 1fr);
@@ -518,8 +541,15 @@ footer p {
     position: relative;
     left: 0px;
   }
+
+  section.career {
+    width: 750px;
+  }
   .career-grid {
     grid-template-columns: repeat(1, 1fr);
+  }
+  section.end {
+    width: 750px;
   }
   .quote {
     width: 90%;
@@ -531,5 +561,10 @@ footer p {
   }
   .end p {
     font-size: 1rem;
+  }
+
+  footer {
+    width: 750px;
+
   }
 }
